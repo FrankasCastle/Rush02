@@ -80,7 +80,7 @@ t_dict	*load_dict(char *dict_name, int *size)
 	if (buffer == NULL)
 		return (0);
 	capacity = count_dict_entries(buffer);
-	dict = (t_dict *)malloc(capacity * 32);
+	dict = (t_dict *)malloc(sizeof(tdict) * capacity);
 	if (dict == NULL)
 	{
 		free (buffer);
